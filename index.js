@@ -12,11 +12,11 @@ app.use(cors());
 app.use(morgan("tiny"));
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api/v1/", (req, res) => {
   res.status(200).json({
     status: 200,
     message: "Welcome to tasktracker API",
-    "api-documentation": "URL added here.",
+    "api-documentation": "https://documenter.getpostman.com/view/6512450/2s7YYijp6x",
   });
 });
 
