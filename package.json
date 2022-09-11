@@ -1,0 +1,29 @@
+{
+  "name": "tasktracker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roland-Sankara/tasktracker-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roland-Sankara/tasktracker-server/issues"
+  },
+  "homepage": "https://github.com/Roland-Sankara/tasktracker-server#readme",
+  "dependencies": {
+    "@prisma/client": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19",
+    "prisma": "^4.3.1"
+  }
+}
