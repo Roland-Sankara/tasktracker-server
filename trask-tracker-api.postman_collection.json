@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "ae8aab39-0796-4a07-a09f-8b7fcff736ad",
+		"name": "trask-tracker-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6512450"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"roland-one\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host3}}/api/v1/users/signup",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signup"
+							]
+						},
+						"description": "This endpoint is used to register a new user."
+					},
+					"response": [
+						{
+							"name": "Create a user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"roland-one\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host3}}/api/v1/users/signup",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"80-RLyQfD2UKdoyAvsRTlFaoWo2wJM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 19:10:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"data\": {\n        \"message\": \"Succesfully registered user\",\n        \"user\": {\n            \"id\": 1,\n            \"username\": \"roland-one\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host3}}/api/v1/users/",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						},
+						"description": "Get all users registered on this application"
+					},
+					"response": [
+						{
+							"name": "Get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host3}}/api/v1/users/",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6f-3NqjyoTbBedSzeBVXn84PAKN4lE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 19:14:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"Success\",\n        \"users\": [\n            {\n                \"id\": 1,\n                \"username\": \"roland-one\",\n                \"password\": \"password123\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"roland-one\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host3}}/api/v1/users/login",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						},
+						"description": "Used to login a registered user into the application"
+					},
+					"response": [
+						{
+							"name": "User login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"roland-one\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host3}}/api/v1/users/login",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-jQYoUcE6ujv+2CIaZZCdncclodM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 19:17:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"User login successful\",\n        \"error\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Visit the shopping mall\",\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host3}}/api/v1/tasks",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						},
+						"description": "This endpoint creates a new task. The userId is what's used to identify the owner of the task."
+					},
+					"response": [
+						{
+							"name": "Create task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"Visit the shopping mall\",\r\n    \"userId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host3}}/api/v1/tasks",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-2UMkT3kMCon3wcTW4RqRQcQ77NA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Sep 2022 09:26:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"data\": {\n        \"message\": \"Successfully created task\",\n        \"task\": {\n            \"id\": 1,\n            \"text\": \"Visit the shopping mall\",\n            \"isCompleted\": false,\n            \"userId\": 1\n        },\n        \"error\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all user tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host3}}/api/v1/tasks/1",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						},
+						"description": "Retrieves all tasks of a user whose ID is provided as a route parameter."
+					},
+					"response": [
+						{
+							"name": "Get all user tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host3}}/api/v1/tasks/1",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-XVMJPurfTzwva5ITRgNYFFymepQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Sep 2022 09:38:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"success\",\n        \"tasks\": [\n            {\n                \"id\": 1,\n                \"text\": \"Visit the shopping mall\",\n                \"isCompleted\": false,\n                \"userId\": 1\n            }\n        ],\n        \"error\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update task",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isCompleted\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host3}}/api/v1/tasks/1",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						},
+						"description": "This endpoint is used to update the properties of a task given it's ID in the route parameter."
+					},
+					"response": [
+						{
+							"name": "Update task",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isCompleted\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host3}}/api/v1/tasks/1",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "153"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"99-n3D7PagJc7DiTGKGPePy7XCTf6Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Sep 2022 09:40:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"Task updated successfully\",\n        \"task\": {\n            \"id\": 1,\n            \"text\": \"Visit the shopping mall\",\n            \"isCompleted\": true,\n            \"userId\": 1\n        },\n        \"error\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host3}}/api/v1/tasks/1",
+							"host": [
+								"{{host3}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						},
+						"description": "Delete a users task given the task ID"
+					},
+					"response": [
+						{
+							"name": "Delete a task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host3}}/api/v1/tasks/1",
+									"host": [
+										"{{host3}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-vdWEfYIDyvT6dq1zr/fAFp/Mtx8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Sep 2022 09:43:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"Task Deleted Successfully\",\n        \"error\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
