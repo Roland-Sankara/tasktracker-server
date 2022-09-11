@@ -3,6 +3,7 @@
 
 ### API host:
 - http://localhost:3030 - (Dev Environment)
+- https://tasktracker-api.herokuapp.com - (Prod Environment)
 
 ### API Documentation:
 - [https://documenter.getpostman.com/view/6512450/2s7YYijp6x](https://documenter.getpostman.com/view/6512450/2s7YYijp6x)
