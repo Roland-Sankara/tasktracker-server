@@ -9,7 +9,7 @@ const getAllUsers = async(req, res) => {
                 username: true
             }
         });
-        res.status(200).json({status: 200, data: {message: 'Success', users}});
+        res.status(200).json({status: 200, data: {message: 'Success', users, error: null}});
     }catch(error){
         res.status(500).json({status: 500, data: {message: 'Failed to fetch users', error}});
     }
@@ -20,7 +20,7 @@ const registerUser = async(req, res) => {
         const user = await prisma.user.create({
             data: req.body
         })
-        res.status(201).json({status: 201, data: {message: 'Succesfully registered user', user: {id: user.id, username: user.username}}})
+        res.status(201).json({status: 201, data: {message: 'Succesfully registered user', user: {id: user.id, username: user.username}, error: null}})
     }catch(error){
         res.status(400).json({status: 400, data: {message: 'Failed to register', error}})
     }
@@ -36,7 +36,7 @@ const loginUser = async(req, res) => {
 
         if(user){
             if(user.password === req.body.password){
-                res.status(200).json({status: 200, data: {message: 'User login successful', error: null}});
+                res.status(200).json({status: 200, data: {message: 'User login successful', user: {id: user.id, username: user.username}, error: null}});
             }else{
                 res.status(400).json({status: 400, data: {message: 'Invalid User Password. Try again!', error: null}})
             }
